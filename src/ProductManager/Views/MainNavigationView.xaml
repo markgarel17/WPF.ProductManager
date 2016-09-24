@@ -1,0 +1,28 @@
+﻿<Page x:Class="ProductManager.Views.MainNavigationView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProductManager.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MainNavigationView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="2" TextAlignment="Center" Margin="10" FontSize="25" Style="{StaticResource PageTitle}">Homepage</TextBlock>
+        <Button Grid.Row="1" Style="{StaticResource MyDefaultButton}" Click="ViewProduct_Click">View</Button>
+        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource MyDefaultButton}" Click="EditProduct_Click">Edit</Button>
+        <Button Style="{StaticResource MyDefaultButton}" Grid.Row="2">Add</Button>
+        <Button Style="{StaticResource MyConfirmButton}" Grid.Row="2" Grid.Column="1">Delete</Button>
+    </Grid>
+</Page>
